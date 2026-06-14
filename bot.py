@@ -1,11 +1,11 @@
 import telebot
 import os
 
-# Get the API token from Railway environment variables
+# Get the token from environment variables
 API_TOKEN = os.environ.get('API_TOKEN')
 bot = telebot.TeleBot(API_TOKEN)
 
-# Handle /start command
+# Handle the /start command
 @bot.message_handler(commands=['start'])
 def send_welcome(message):
     bot.reply_to(message, "البوت يعمل الآن بنجاح!")
